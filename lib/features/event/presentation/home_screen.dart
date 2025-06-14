@@ -132,6 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ? itemEmpty(context, "NO EVENTS FOUND !!")
         : ListView.builder(
             shrinkWrap: true,
+            padding:  EdgeInsets.all(5),
             physics: AlwaysScrollableScrollPhysics(),
             itemCount: events.length,
             itemBuilder: (context, index) {
@@ -146,16 +147,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   await viewDialog(context, data);
                 },
                 child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(5),
                   padding: EdgeInsets.all(10),
                   // height: 100,
                   width: sW(context),
                   decoration: BoxDecoration(
-                    color: Config.whiteClr,
+                    color: Config.orangeAccent,
                     borderRadius: BorderRadius.circular(8),
-                    boxShadow: [
-                      BoxShadow(color: Colors.black26, blurRadius: .7),
-                    ],
                   ),
                   child: Row(
                     spacing: 10,
@@ -401,7 +399,7 @@ class _HomeScreenState extends State<HomeScreen> {
 Color _getColorFromBase(int index, int totalItems) {
   // Convert violetClr to HSL for easier hue manipulation
   HSLColor hslColor = HSLColor.fromColor(
-    const Color.fromARGB(255, 28, 56, 107),
+    const Color.fromARGB(255, 206, 223, 255),
   );
   // Calculate hue shift to evenly distribute colors
   double hueShift = (360.0 / totalItems) * index;

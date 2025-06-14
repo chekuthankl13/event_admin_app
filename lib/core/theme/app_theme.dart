@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static ThemeData theme = ThemeData(
     useMaterial3: true,
-    // fontFamily: "Poppins",
+    fontFamily: "Poppins",
     scaffoldBackgroundColor: Colors.white,
     shadowColor: Colors.transparent,
     hoverColor: Colors.black12.withAlpha(5),
